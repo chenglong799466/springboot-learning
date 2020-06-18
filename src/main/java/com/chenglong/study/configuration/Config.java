@@ -1,0 +1,21 @@
+package com.chenglong.study.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @author v_longcheng
+ * @date 2019/6/11
+ * @description
+ */
+@Configuration
+public class Config {
+
+
+    @Bean
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
+
+}

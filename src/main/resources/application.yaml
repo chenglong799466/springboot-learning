@@ -1,0 +1,29 @@
+mybatis:
+  type-aliases-package: com.neo.entity
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+
+# logback日志配置
+logging:
+  file:
+    max-size: 10MB
+    logging-file: ./log/springboot-test.log
+  pattern:
+    # console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %clr(%logger){cyan} %clr(%msg%n){green}"
+    file: "%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n"
+  level:
+    root: info # 所有的文件都设置为debug级别
+
+
+# 监控接口配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: off
