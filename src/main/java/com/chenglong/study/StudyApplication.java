@@ -13,5 +13,6 @@ public class StudyApplication {
     // SpringBoot项目通过扫描整个项目查找main方法来启动整个web。
     public static void main(String[] args) {
         SpringApplication.run(StudyApplication.class, args);
+
     }
 }

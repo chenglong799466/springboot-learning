@@ -14,7 +14,6 @@ public class JsonUtils {
 
     private static ObjectMapper mapper = new ObjectMapper();
 
-
     /**
      * Serialize any Java value as a String
      *
