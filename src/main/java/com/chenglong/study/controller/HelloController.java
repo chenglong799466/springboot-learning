@@ -36,8 +36,8 @@ public class HelloController {
     private RestTemplate restTemplate;
 
     @GetMapping
-    public String hello() {
-        return "hello";
+    public String echo(@RequestParam(value = "echo") String echo) {
+        return echo;
     }
 
     @GetMapping(value = "/sub")
@@ -75,7 +75,6 @@ public class HelloController {
             e.printStackTrace();
         }
         System.out.println(server.mqttMessage.isRetained() + "------ratained状态");
-
     }
 
     /**
